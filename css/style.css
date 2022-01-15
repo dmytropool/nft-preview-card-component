@@ -4,38 +4,38 @@ body {
     font-family: Outfit;
     font-weight: 500;
     color: hsl(215, 51%, 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 .content_image {
     margin: 0 auto;
-    border-radius: 5%;
+    border-radius: 3%;
     width: 303px;
     height: 303px;
    
 }
 .overlay_box {
-    border-radius: 5%;
+    position: absolute;
+    border-radius: 3%;
     width: 303px;
     height: 303px;    
-    background: hsl(178, 100%, 50%);   
+    background: hsl(178, 100%, 50%, 65%);  
+    opacity: 0; 
+    top: 20px;   
 }
-.content_image:hover {
-    cursor:pointer;
-    transition: all .5s;
-    opacity: 0.5;
-    filter: alpha(opacity=50); 
-}
-.overlay_box:hover .view_icon {
+.overlay_box:hover {
     opacity: 1;
     transition: all .5s;
 }
 .view_icon {
     position: absolute;  
     display: block;
-    top: 151.5px;
+    top: 131.5px;
     left: 131.5px;
-    opacity: 0;
+    opacity: 1;
 }
-
 .avatar_img {
     margin: 20px 20px 20px 0px;
     border: 2px solid #cfd8dc;
@@ -55,15 +55,17 @@ body {
     background-color: hsl(216, 50%, 16%);
     width:350px;
     margin: 0 auto;
-    border-radius: 5%;
+    border-radius: 3%;
 
 }
 hr {
     border-color:  hsl(215, 32%, 27%);
     border-style: solid;
 }
-h3{
+h1{
     color: white;
+    font-size: 18px;
+    width: max-content;     
 }
 .time_left {
    position: relative;
@@ -84,7 +86,7 @@ h3{
     margin-right: 3px;
     vertical-align:-15%;
 }
-h3:hover {
+h1:hover {
     color: hsl(178, 100%, 50%);
     cursor:pointer;
 }
